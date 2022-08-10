@@ -1,0 +1,6 @@
+project("src")
+set(CXX_STANDARD_REQUIRED 23)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
+set(CMAKE_SHARED_LIBRARY_PREFIX "")
+add_library(Board SHARED Board.cpp Board.hpp)
+add_executable(Game main.cpp)
