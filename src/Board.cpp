@@ -1,3 +1,15 @@
 #include "Board.hpp"
-Blank::Blank(): id(-1), value(0), up(this), down(this), left(this), right(this){}
-Blank::Blank(int blank_id, int val): id(blank_id), value(val), up(this), down(this), left(this), right(this){}
+//BoradInterface
+int BoardInterFace::getId(){
+    return this->id;
+}
+
+int BoardInterFace::getVal(){
+    return this->value;
+}
+//Board
+void Board::add(BoardInterFace* item){
+    if(item->getId() == -1){
+        
+    }
+}
