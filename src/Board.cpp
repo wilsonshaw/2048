@@ -10,6 +10,6 @@ int BoardInterFace::getVal(){
 //Board
 void Board::add(BoardInterFace* item){
     if(item->getId() == -1){
-        
+        for (BoardInterFace* cur = this; cur->down != this; cur = cur->down);
     }
 }
