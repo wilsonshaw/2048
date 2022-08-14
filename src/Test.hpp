@@ -9,14 +9,15 @@
 #define TEST_HPP_INCLUDE
 class TestInterface{
 public:
-    virtual int add (int a, int b) = 0;
+    virtual void Hello() = 0;
 };
 class Test: public TestInterface{
 public:
-    virtual TestInterface* CreateAPI();
-    virtual int add(int a, int b);
+    virtual void Hello();
 };
+typedef TestInterface* (*pCAPI)();
 #endif
 
-extern "C" TestInterface* TEST_API CreateAPI();
-extern "C" void TEST_API DestroyAPI(TestInterface*);
+extern "C"{
+    TestInterface* TEST_API CreateAPI();
+}

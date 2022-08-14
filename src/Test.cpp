@@ -1,12 +1,10 @@
 #include "Test.hpp"
-int Test::add(int a, int b){
-    return a + b;
+#include <iostream>
+
+void Test::Hello(){
+    std::cout << "Hello, Wilson!" << std::endl;
 }
 
 TestInterface* CreateAPI(){
     return new Test();
-}
-
-void DestroyAPI(TestInterface* item){
-    delete item;
 }
