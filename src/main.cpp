@@ -1,10 +1,12 @@
+#include <windows.h>
 #include "Test.hpp"
 #include <iostream>
-#include <windows.h>
+
 int main(){
     HMODULE hDll = LoadLibrary("Test.dll");
-    pCAPI CAPI = (pCAPI)GetProcAddress(hDll, "CreateAPI");
-    TestInterface* tIF = CAPI();
+    SetDll* dll = new SetDll();
+    dll->CAPI = (pCAPI)GetProcAddress(hDll, "CreateAPI");
+    TestInterface* tIF = dll->CAPI();
     tIF->Hello();
     FreeLibrary(hDll);
 }

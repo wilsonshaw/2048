@@ -55,6 +55,6 @@ public:
 #endif
 
 extern "C"{
-    BoardInterFace* BOARD_API CreateAPI();
+    BOARD_API BoardInterFace*  CreateAPI();
     void BOARD_API DestoryAPI();
 }

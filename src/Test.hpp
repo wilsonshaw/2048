@@ -16,8 +16,11 @@ public:
     virtual void Hello();
 };
 typedef TestInterface* (*pCAPI)();
+struct SetDll{
+    pCAPI CAPI;
+};
 #endif
 
 extern "C"{
-    TestInterface* TEST_API CreateAPI();
+    TEST_API TestInterface* CreateAPI();
 }
