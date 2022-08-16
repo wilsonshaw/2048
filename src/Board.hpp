@@ -1,8 +1,5 @@
 #ifndef BOARD_EXPORTS
 #define BOARD_API __declspec(dllexport)
-#define BOARD_EXPORTS
-#else
-#define BOARD_API __declspec(dllimport)
 #endif
 
 

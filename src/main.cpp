@@ -1,6 +1,6 @@
+#include <iostream>
 #include <windows.h>
 #include "Test.hpp"
-#include <iostream>
 
 int main(){
     HMODULE hDll = LoadLibrary("Test.dll");

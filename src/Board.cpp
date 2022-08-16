@@ -1,3 +1,13 @@
+/**
+ * @file Board.cpp
+ * @author WilonShaw
+ * @brief 
+ * @version 0.1
+ * @date 2022-08-16
+ * 
+ * @copyright Templar (c) 2022
+ * 
+ */
 #include "Board.hpp"
 //BoradInterface
 int BoardInterFace::getId(){
