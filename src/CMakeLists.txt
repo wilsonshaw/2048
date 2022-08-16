@@ -1,4 +1,5 @@
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
-set(CMAKE_SHARED_LIBRARY_PREFIX "")
-add_library(Test SHARED Test.cpp Test.hpp)
+add_library(Test 
+SHARED 
+    Test.cpp
+)
 add_executable(Game main.cpp)
