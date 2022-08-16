@@ -1,5 +1,5 @@
-add_library(Test 
-SHARED 
-    Test.cpp
+add_library(Engine 
+SHARED
+    Engine.cpp
 )
-add_executable(Game main.cpp)
+add_executable(${PROJECT_NAME} main.cpp)
