@@ -13,7 +13,8 @@ class EngineInterface{
 public:
     virtual void gameMain(GameObject* gameInit, GameObject* hundleEvents, 
     GameObject* update, GameObject* render) = 0;
-    virtual bool getisIfRunning() = 0;
+    virtual bool getIsIfRunning() = 0;
+    virtual ~EngineInterface(){}
 };
 
 extern "C"{
