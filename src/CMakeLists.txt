@@ -1,4 +1,5 @@
 add_subdirectory(Engine)
+add_subdirectory(Frame)
 add_executable(${PROJECT_NAME}
     main.cpp
 )
@@ -7,6 +8,7 @@ PRIVATE
     ${PROJECT_SOURCE_DIR}/include
 )
 target_link_libraries(${PROJECT_NAME}
-PUBLIC
+PRIVATE
     Engine
+    Qt6::Widgets
 )

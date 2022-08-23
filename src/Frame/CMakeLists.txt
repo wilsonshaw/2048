@@ -1,9 +1,8 @@
-project(Engine)
-include(${CMAKE_SOURCE_DIR}/settings.cmake)
+project(Frame)
 add_library(${PROJECT_NAME}
 SHARED
-    Engine.cpp
-    Engine.h
+    Frame.cpp
+    Frame.h
 )
 target_link_libraries(${PROJECT_NAME}
 PRIVATE
