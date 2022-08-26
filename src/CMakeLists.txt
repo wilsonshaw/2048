@@ -10,5 +10,6 @@ PRIVATE
 target_link_libraries(${PROJECT_NAME}
 PRIVATE
     Engine
+    Frame
     Qt6::Widgets
 )

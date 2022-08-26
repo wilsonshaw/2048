@@ -5,9 +5,10 @@
 #endif
 
 #include <QWidget>
+#include <QPushButton>
 
 class Frame_API Frame: public QWidget{
+    QPushButton* closeBtn;
 public:
-    static void GameInit();
-    Frame(int agrc, char** argv);
+    Frame(Frame* parent = nullptr, Qt::WindowFlags f = Qt::WindowFlags(), int w = 480, int h = 720);
 };

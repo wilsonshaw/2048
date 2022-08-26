@@ -3,16 +3,12 @@
 #include <QApplication>
 #include <QPushButton>
 
-Frame::Frame(int argc, char** argv){
-    QApplication app = QApplication(argc, argv);
-    GameInit();
-    app.exec();
+Frame::Frame(Frame* parent, Qt::WindowFlags f, int w, int h){
+    QWidget win(parent, f);
+    this->resize(w, h);
+//Butto Close Init
+    closeBtn = new QPushButton("Close");
+    closeBtn->setParent(this);
+    closeBtn->setStyleSheet(QString("color=red;"));
+    connect(closeBtn, &QPushButton::pressed, this, &Frame::close);
 }
-
-void Frame::GameInit(){
-    QWidget win = QWidget();
-    QPushButton closeBtn = QPushButton(); 
-    closeBtn.setText("Close");
-    closeBtn.setParent(&win);
-    win.show();
-};
