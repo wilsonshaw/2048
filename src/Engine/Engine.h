@@ -24,3 +24,9 @@ public:
     static void Hello();
     static void GameInit();
 };
+
+class Engine_API Test{
+static int runTime;
+public:
+    void printRunTime();
+};

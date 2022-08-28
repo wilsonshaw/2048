@@ -10,3 +10,10 @@ void Engine::Hello(){
 void Engine::GameInit(){
 
 };
+
+int Test::runTime = 0;
+
+void Test::printRunTime(){
+   cout << runTime << endl; 
+   runTime++;
+}

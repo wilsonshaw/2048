@@ -5,10 +5,6 @@
 class Engine_API Engine;
 class Frame_API Frame;
 
-int main(int argc, char** argv){
-    QApplication app = QApplication(argc, argv);
-    Frame win = Frame(nullptr, Qt::FramelessWindowHint);
-    win.show();
-    app.exec();
+int main(int argc, char** argv){ 
     return 0;
 }

@@ -5,10 +5,14 @@
 #endif
 
 #include <QWidget>
+#include <QLayout>
 #include <QPushButton>
 
 class Frame_API Frame: public QWidget{
     QPushButton* closeBtn;
+    QVBoxLayout* buttonsLayout;
 public:
     Frame(Frame* parent = nullptr, Qt::WindowFlags f = Qt::WindowFlags(), int w = 480, int h = 720);
+    ~Frame();
+    void mainWindowsInit();
 };
