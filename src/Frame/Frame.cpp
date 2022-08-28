@@ -1,30 +1,27 @@
 #include "Frame.h"
-#include <QLayout>
-#include <QWidget>
-#include <QApplication>
-#include <QPushButton>
 
-Frame::Frame(Frame* parent, Qt::WindowFlags f, int w, int h){
-    QWidget win(parent, f);
-    this->resize(w, h);
-    this->setWindowFlags(Qt::FramelessWindowHint);
-    this->setStyleSheet(QString("background-color=yellow;"));
-//Button Close Init
-    closeBtn = new QPushButton("Close");
-    closeBtn->setStyleSheet(QString("color=red;"));
-    connect(closeBtn, &QPushButton::pressed, this, &Frame::close);
-//Layout of buttons
-    buttonsLayout = new QVBoxLayout();
-    buttonsLayout->addWidget(closeBtn);
-
-    mainWindowsInit();
+Frame::Frame(Frame* parents, Qt::WindowFlags f): QWidget(parents, f){
+//Init Windows
+    resize(480, 720);
+//Init Layout
+    initLayout();
+//Init Buttons
+    initButton();
 }
 
 Frame::~Frame(){
-    delete closeBtn;
-    delete buttonsLayout;
+    delete closeButton;
 }
 
-void Frame::mainWindowsInit(){
-    buttonsLayout->setParent(this); 
+void Frame::initLayout(){
+    buttonsLayout = new QVBoxLayout();
+    
+    this->setLayout(buttonsLayout);
+}
+
+void Frame::initButton(){
+//Button close init
+    closeButton = new QPushButton(QString("离开"));
+    connect(closeButton, &QPushButton::pressed , this, &Frame::close);
+    buttonsLayout->addWidget(closeButton);
 }
