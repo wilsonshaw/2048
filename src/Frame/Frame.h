@@ -4,11 +4,15 @@
     #define Frame_API __declspec(dllimport)
 #endif
 
+#include <QObject>
 #include <QWidget>
 #include <QLayout>
 #include <QPushButton>
 
-class Frame_API Frame: public QWidget{
+class Frame_API Frame: public QWidget
+{
+    Q_OBJECT
+private:
     QPushButton* startButton;
     QPushButton* closeButton;
     QVBoxLayout* buttonsLayout;
@@ -19,4 +23,8 @@ class Frame_API Frame: public QWidget{
 public:
     Frame(Frame* parents = nullptr, Qt::WindowFlags f = Qt::WindowFlags());
     ~Frame();
+signals:
+
+public slots:
+    void mouseMove(QMouseEvent* event);
 };

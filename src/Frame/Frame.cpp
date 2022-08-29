@@ -1,15 +1,21 @@
 #include "Frame.h"
+#include <iostream>
 
-Frame::Frame(Frame* parents, Qt::WindowFlags f): QWidget(parents, f){
+using namespace std;
+
+Frame::Frame(Frame* parents, Qt::WindowFlags f): QWidget(parents, f)
+{
 //Init Windows
     resize(480, 720);
 //Init Layout
     initLayout();
 //Init Buttons
     initButton();
+    connect(this, &Frame::mousePressEvent, this, &Frame::mouseMove);
 }
 
-Frame::~Frame(){
+Frame::~Frame()
+{
 //buttonsLayout
     buttonsLayout->removeWidget(closeButton); 
 //winLayout
@@ -20,7 +26,8 @@ Frame::~Frame(){
 }
 
 
-void Frame::initLayout(){
+void Frame::initLayout()
+{
 //the buttons' layout
     buttonsLayout = new QVBoxLayout();
 ///the main window's layout
@@ -32,7 +39,8 @@ void Frame::initLayout(){
     this->setLayout(winLayout);
 }
 
-void Frame::initButton(){
+void Frame::initButton()
+{
 //Button start init
     startButton = new QPushButton(QString("开始")); 
     connect(startButton, &QPushButton::pressed, this, &Frame::close);
@@ -41,4 +49,9 @@ void Frame::initButton(){
     closeButton = new QPushButton(QString("离开"));
     connect(closeButton, &QPushButton::pressed , this, &Frame::close);
     buttonsLayout->addWidget(closeButton, 1);
+}
+
+void Frame::mouseMove(QMouseEvent* event)
+{
+    cout << "Clicked!" << endl;
 }
