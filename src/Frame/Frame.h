@@ -9,9 +9,11 @@
 #include <QPushButton>
 
 class Frame_API Frame: public QWidget{
+    QPushButton* startButton;
     QPushButton* closeButton;
     QVBoxLayout* buttonsLayout;
-
+    QHBoxLayout* winLayout;
+//Private methods
     void initButton();
     void initLayout();    
 public:
