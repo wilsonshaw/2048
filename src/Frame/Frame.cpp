@@ -11,7 +11,6 @@ Frame::Frame(Frame* parents, Qt::WindowFlags f): QWidget(parents, f)
     initLayout();
 //Init Buttons
     initButton();
-    connect(this, &Frame::mousePressEvent, this, &Frame::mouseMove);
 }
 
 Frame::~Frame()
@@ -49,9 +48,4 @@ void Frame::initButton()
     closeButton = new QPushButton(QString("离开"));
     connect(closeButton, &QPushButton::pressed , this, &Frame::close);
     buttonsLayout->addWidget(closeButton, 1);
-}
-
-void Frame::mouseMove(QMouseEvent* event)
-{
-    cout << "Clicked!" << endl;
 }

@@ -26,5 +26,4 @@ public:
 signals:
 
 public slots:
-    void mouseMove(QMouseEvent* event);
 };
