@@ -5,6 +5,6 @@ SHARED
     Frame.h
 )
 target_link_libraries(${PROJECT_NAME}
-PRIVATE
+PUBLIC
     Qt6::Widgets
 )

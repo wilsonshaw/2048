@@ -34,6 +34,7 @@ void Frame::initLayout()
     winLayout->setAlignment(Qt::AlignHCenter);
     winLayout->addSpacing(2);
     winLayout->addLayout(buttonsLayout, 1);
+    winLayout->setContentsMargins(20, 20, 20, 20);
 
     this->setLayout(winLayout);
 }

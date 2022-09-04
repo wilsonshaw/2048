@@ -7,6 +7,7 @@
 #include <QObject>
 #include <QWidget>
 #include <QLayout>
+#include <QString>
 #include <QPushButton>
 
 class Frame_API Frame: public QWidget

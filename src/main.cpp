@@ -9,6 +9,5 @@ int main(int argc, char** argv){
     QApplication app = QApplication(argc, argv);
     Frame mainWin;
     mainWin.show();
-    app.exec();
-    return 0;
+    return app.exec();
 }
