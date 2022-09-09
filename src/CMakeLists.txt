@@ -1,5 +1,6 @@
 add_subdirectory(Engine)
 add_subdirectory(Frame)
+add_subdirectory(CLI)
 add_executable(${PROJECT_NAME}
     main.cpp
 )

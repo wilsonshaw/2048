@@ -1,0 +1,10 @@
+project(CLI)
+add_library(CLI
+SHARED
+    CLI.c
+    CLI.h
+)
+target_include_directories(CLI
+PUBLIC
+    ${CMAKE_SOURCE_DIR}/include
+)
